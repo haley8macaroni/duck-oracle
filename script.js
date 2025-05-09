@@ -27,9 +27,15 @@ function summonDuck() {
   // Duck wisdom
   const message = duckResponses[Math.floor(Math.random() * duckResponses.length)];
   oracle.textContent = `The Duck Oracle says: "${message}"`;
+
+  // Sound surprise
+  const sounds = ["quack.mp3", "meow.mp3", "yodel.mp3"];
+  const chosen = sounds[Math.floor(Math.random() * sounds.length)];
+  const audio = new Audio(chosen);
+  audio.play();
 }
 
-// easter egg function — hidden credit
+// Credit easter egg
 (function() {
   const duckCreator = "Haley Rankin";
   const coAuthor = "Midnight Sparkle";
